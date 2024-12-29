@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    min-height: 100vh;
+    background-color: #a5abc4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    height: 600px;
+    width: 400px;
+    box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background-color: #483459;
+}
+
+.display-container {
+    position: relative;
+    width: 100%;
+    height: 100px;
+}
+
+.display-screen {
+    width: 100%;
+    height: 100px;
+    border: none;
+    border-radius: 15px;
+    font-size: 3rem;
+    text-align: right;
+    color: black;
+    font-family: 'Orbitron', sans-serif !important;
+}
+
+.placeholder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    color: #999;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    font-family: 'Orbitron', sans-serif;
+
+}
+
+.placeholder.hidden {
+    opacity: 0;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    row-gap: 30px;
+    padding-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.button {
+    flex: 0 0 22%;
+    height: 52px;
+    width: 62px;
+    border: none;
+    border-radius: 15px;
+    font-size: 2.9rem;
+    background-color: #a5abc4;
+    color: #483459;
+    cursor: pointer;
+    transition: all 0.3s;
+
+}
+
+/* Let's style the buttons a bit more: */
+#div-button,
+#mult-button,
+#sub-button,
+#add-button {
+    background-color: #672a6f;
+    color: #a5abc4;
+}
+
+#del-button {
+    background-color: #8b3027;
+    color: #a5abc4;
+}
+
+
+#eq-button {
+    background-color: #928b5a;
+    color: #c8cee7;
+}
+
+#button-C {
+    background-color: #415f79;
+    color: #a5abc4;
+}
+
+/* Let's add some activity effects to the buttons: */
+.button:active {
+    background-color: #4e4645;
+    color: #a5abc4;
+}
+
+#button-C:active,
+#eq-button:active,
+#del-button:active,
+#div-button:active,
+#mult-button:active,
+#sub-button:active,
+#add-button:active {
+    background-color: #2b2b2b;
+    color: #a5abc4;
+}
+
+.button.active {
+    background-color: #4e4645;
+    color: #a5abc4;
+    transform: scale(0.95);
+}
